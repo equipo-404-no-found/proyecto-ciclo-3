@@ -1,0 +1,31 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: X3frlKRQBo1zgpKbU5Nu3BYRlmwN21b5
+            client-secret: NmqcKtESzk9XOlnLK3-oZqzdG4RZQr669_okoo4r02fsrqISdjg26L0DxNNi3_E8
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          auth0:
+            # trailing slash is important
+
+            issuer-uri: https://dev-rdmofgnz.us.auth0.com/
+
+  datasource:
+    password: Jordisjulianvilla
+    url: jdbc:postgresql://db.viqjjfopdftzgabzrqeu.supabase.co:5432/postgres
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  mvc:
+    format:
+      date: yyyy-MM-dd
